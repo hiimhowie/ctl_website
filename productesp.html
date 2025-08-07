@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - CTL Limitada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16" href="favicon.png" type="image/png">
+    <style>
+        /* Basic CSS reset for smoother design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+            backdrop-filter: blur(5px); /* Blur for clarity */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 20px;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+
+            .menu a {
+                padding: 10px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+        /* Mobile Responsive Adjustments */
+        @media (min-width: 768px) {
+       .hamburger {
+        display: none;
+		}
+		}
+
+        .banner-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .product-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .package {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff5a4d;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Flexbox for packages */
+        .package-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product-section h1 {
+                font-size: 28px;
+            }
+
+            .product h2 {
+                font-size: 24px;
+            }
+
+            .product p {
+                font-size: 16px;
+            }
+
+            .package-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CTL Limitada</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="menu">
+                <a href="indexesp.html">Inicio</a>
+                <a href="productesp.html">Productos</a>
+                <a href="aboutesp.html">Sobre Nosotros</a>
+                <a href="contactesp.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <h1>Paquetes</h1>
+
+        <!-- Fiber Internet Service -->
+        <div class="product">
+            <img src="internetimg.jpg" alt="Servicio de Internet de Fibra" class="banner-image">
+            <h2>Servicio de Internet de Fibra</h2>
+            <p>Disfrute de velocidades ultrarrápidas con nuestro servicio de Internet de fibra dedicado. Perfecto para streaming, juegos y trabajar desde casa.</p>
+
+            <div class="package-container">
+                <div class="package">
+                    <h3>Fiber Fast</h3>
+                    <p>Velocidad: Hasta 10 Mbps</p>
+                    <p>Instalación solo $6000</p>
+                    <p>Mensualidad $4025</p>
+                    <p>Ideal para navegación y streaming casual.</p>
+                    <a href="https://form.jotform.com/223215403666855" target="_blank" rel="noopener noreferrer" class="btn-primary">Regístrate</a>
+                </div>
+                <div class="package">
+                    <h3>Fiber Fast 20</h3>
+                    <p>Velocidad: Hasta 25 Mbps</p>
+                    <p>Instalación solo $6000</p>
+                    <p>Mensualidad $5000</p>
+                    <p>Ideal para familias y varios dispositivos.</p>
+                    <a href="https://form.jotform.com/223215403666855" target="_blank" rel="noopener noreferrer" class="btn-primary">Regístrate</a>
+                </div>
+                <div class="package">
+                    <h3>Fiber Fast 50</h3>
+                    <p>Velocidad: Hasta 50 Mbps</p>
+                    <p>Instalación solo $6000</p>
+                    <p>Mensualidad $10000</p>
+                    <p>Perfecto para streaming y juegos intensivos.</p>
+                    <a href="https://form.jotform.com/223215403666855" target="_blank" rel="noopener noreferrer" class="btn-primary">Regístrate</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TV Subscription Service -->
+        <div class="product">
+            <img src="internetimg.jpg" alt="Servicio de Suscripción de TV" class="banner-image">
+            <h2>Servicio de Suscripción de TV</h2>
+            <p>Disfrute de una amplia gama de canales con nuestro servicio de suscripción de TV asequible. Acceda a sus programas y películas favoritos en cualquier momento y lugar.</p>
+            <a href="CTL CHANNEL LISTING.docx" class="btn-primary">Ver Listado de Canales</a>
+
+            <div class="package-container">
+                <div class="package">
+                    <h3>Básico</h3>
+                    <p>Instalación $9000</p>
+                    <p>Precio: $3000</p>
+                    <p>Canales: Más de 176 canales incluyendo Noticias Locales e Internacionales.</p>
+                </div>
+                <div class="package">
+                    <h3>Paquete de Deportes</h3>
+                    <p>Precio: $1000</p>
+                    <p>Canales: 11 canales, incluyendo todas las redes deportivas principales.</p>
+                </div>
+                <div class="package">
+                    <h3>Paquete para Adultos</h3>
+                    <p>Precio: $600</p>
+                    <p>Canales: 3 canales premium para adultos.</p>
+                </div>
+            </div>
+
+            <a href="https://form.jotform.com/223254470815858" class="btn-primary">Inscríbete Ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+           <a href="PoliticaPrivacidad.pdf" target="_blank">Política de Privacidad</a> | <a href="TerminosDeUso.pdf" target="_blank">Términos de Servicio</a>
+        </div>
+        <div>
+            <a href="https://www.facebook.com" target="m.facebook.com/ctllimited/">Facebook</a> |
+            <a href="https://wa.me/18767833559" target="_blank">Chatea con nosotros en WhatsApp</a> |
+            <a href="https://www.instagram.com" target="instagram/ctl-ltd">Instagram</a>
+        </div>
+        &copy; 2024 CTL Limitada. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        window.onscroll = function() {
+            var navbar = document.querySelector("nav");
+            if (window.pageYOffset > 50) {
+                navbar.style.backgroundColor = "#003366";
+            } else {
+                navbar.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+            }
+        };
+    </script>
+
+</body>
+</html>

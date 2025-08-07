@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact CTL Limited</title>
+    <meta name="description" content="Contact CTL Limited for fiber internet and cable TV services in Harbour View, Bull Bay & St. Thomas, Jamaica. Check availability and speak with our local team.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="icon" sizes="16x16" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Existing CSS kept exactly as-is */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
+        header { background-color: #fff; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        @media (max-width: 768px) {.menu {display: none; flex-direction: column; width: 100%; text-align: left; padding: 10px 0;} .menu a {padding: 10px 20px; border-bottom: 1px solid #ddd;} .hamburger {display: block; font-size: 24px; cursor: pointer;} .menu.active {display: flex;} } @media (min-width: 768px) {.hamburger {display: none;} }
+        .contact-section { padding: 60px 20px; background-color: #fff; text-align: center; }
+        .contact-section h1 { font-size: 36px; margin-bottom: 20px; }
+        .contact-section p { font-size: 18px; color: #666; max-width: 800px; margin: 0 auto; margin-bottom: 30px; }
+        .map-placeholder { width: 100%; height: 400px; background-color: #ddd; margin-bottom: 40px; display: flex; justify-content: center; align-items: center; }
+        .contact-form { max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        .contact-form button { padding: 12px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
+        .contact-form button:hover { background-color: #ff3e2f; }
+        .contact-details { max-width: 800px; margin: 40px auto; text-align: left; }
+        .contact-details h2 { font-size: 24px; margin-bottom: 10px; }
+        .contact-details p { font-size: 18px; margin-bottom: 20px; color: #444; }
+        footer { background-color: #333; color: white; text-align: center; padding: 20px 0; font-size: 14px; }
+        footer a { color: white; text-decoration: none; margin: 0 10px; font-size: 14px; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {.contact-form {padding: 15px;} .map-placeholder {height: 250px;} }
+        .faq-section {padding: 40px 20px; background-color: #f9f9f9; margin-top: 40px;}
+        .faq-section h2 {font-size: 28px; margin-bottom: 20px; text-align: center; color: #333;}
+        .faq-section dl {max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.6;}
+        .faq-section dt {font-weight: bold; margin-top: 15px;}
+        .faq-section dd {margin-left: 20px; margin-bottom: 15px; color: #666;}
+        .faq-section dd a {color: #007bff; text-decoration: none;}
+        .faq-section dd a:hover {text-decoration: underline;}
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo"><a href="index.html">CTL Limited</a></div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="sub-nav">
+        <a href="areasweserve.html">Service Area</a>
+        <a href="careers.html">Careers</a>
+        <a href="https://balance.ctl-ltd.com/">Check Balance</a>
+    </div>
+</header>
+
+<section class="contact-section">
+    <h1>Contact CTL Limited - Serving Harbour View, Bull Bay & St. Thomas</h1>
+    <p>Have any questions or need assistance with our services? Contact us through the form below, or use the map to visit our office.</p>
+
+    <div class="map-placeholder">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18681.587665572715!2d-76.7076779!3d17.9496754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edb47ad36b8f401%3A0x791e9ed3acf00f4b!2sCTL%20Limited%20-%20Harbour%20View!5e1!3m2!1sen!2sjm!4v1729282931893!5m2!1sen!2sjm" width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Availability Checker Section Added -->
+    <div class="contact-form">
+        <h2>Check Internet Availability</h2>
+        <form id="availabilityForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            <input type="text" id="address" name="address" placeholder="Service Address / Community" required>
+            <textarea id="message" name="message" rows="5" placeholder="Additional Details (Optional)"></textarea>
+            <button type="button" onclick="sendAvailabilityMail()">Check Availability</button>
+        </form>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+        <h2>Our Office</h2>
+        <p>Address: Shop #21, Harbour Bay Plaza, Harbour View<br>Phone: 8765482003 / 8767833559<br>Email: support@ctl-ltd.com</p>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <dl>
+        <dt>What services do you offer?</dt>
+        <dd>We offer high-speed Fiber Internet and Cable services</dd>
+        <dt>How can I pay for my service or bill Online?</dt>
+        <dd>C.T.L LIMITED ONLINE BANKING INFORMATION</dd>
+        <dd>For customers doing the transfer VIA NCB Online Banking CTL Ltd is already registered on the NCB platform. CALL/COME INTO THE OFFICE, For your assigned customer account number (this is also the account number on your receipt). Telephone numbers (876-5482003/876-783-3559).</dd>
+        <dd>FOR CUSTOMERS MAKING ONLINE TRANSFERS VIA ANY OTHER BANKING INSTITUTION E.G(SCOTIA,JMMB,CIBC)</dd>
+        <dd>BANK NAME : NATIONAL COMMERCIAL BANK (NCB)</dd>
+        <dd>NAME : C.T.L LIMITED</dd>
+        <dd>A/C# : 201-046-351 (chequing)</dd>
+        <dd>BRANCH : WINDWARD ROAD/ DUKE STREET</dd>
+        <dd>PLEASE CALL C.T.L LIMITED WHEN TRANSFER IS COMPLETED.</dd>
+        <dt>What should I do if I experience technical issues?</dt>
+        <dd>If you're experiencing technical issues, please contact our support team at <a href="mailto:support@ctl-ltd.com">support@ctl-ltd.com</a>, or call us directly at 8765482003 or 8767833559.</dd>
+        <dt>Can I upgrade my service plan?</dt>
+        <dd>Yes, you can upgrade your service plan at any time. Please contact our customer support team for assistance with the upgrade process.</dd>
+        <dt>How can I cancel my service?</dt>
+        <dd>If you'd like to cancel your service, please get in touch with our customer support team. We will guide you through the cancellation process.</dd>
+    </dl>
+</section>
+
+<footer>
+    <div>
+        <a href="PrivacyPolicy.pdf" target="_blank">Privacy Policy</a> | <a href="termsofuse.pdf" target="_blank">Terms of Service</a>
+    </div>
+    <div>
+        <a href="https://www.facebook.com" target="m.facebook.com/ctllimited/">Facebook</a> |
+        <a href="https://wa.me/18767833559" target="_blank">Chat with us on WhatsApp</a> |
+        <a href="https://www.instagram.com" target="instagram/ctl-ltd">Instagram</a>
+    </div>
+    &copy; 2024 CTL Limited. All rights reserved.
+</footer>
+<a href="https://wa.me/18767833559" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 16px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:1000;" target="_blank">
+<i class="fab fa-whatsapp" style="font-size:24px;"></i>
+</a>
+<script>
+    function toggleMenu() { var menu = document.querySelector('.menu'); menu.classList.toggle('active'); }
+
+    function sendAvailabilityMail() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var address = document.getElementById('address').value;
+        var message = document.getElementById('message').value;
+
+        var mailtoLink = 'mailto:support@ctl-ltd.com' +
+                         '?subject=Availability Check Request from ' + encodeURIComponent(name) +
+                         '&body=Name: ' + encodeURIComponent(name) +
+                         '%0D%0APhone: ' + encodeURIComponent(phone) +
+                         '%0D%0AAddress: ' + encodeURIComponent(address) +
+                         '%0D%0AAdditional Info: ' + encodeURIComponent(message);
+
+        window.location.href = mailtoLink;
+    }
+</script>
+
+</body>
+</html>

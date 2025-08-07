@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - CTL Limitada</title>
+    <link href="https://fonts.google<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos - CTL Limited</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16" href="favicon.png" type="image/png">
+    <style>
+        /* Basic CSS reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+
+            .menu a {
+                padding: 10px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+        /* Mobile Responsive Adjustments */
+        @media (min-width: 768px) {
+       .hamburger {
+        display: none;
+		}
+		}
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Google Maps Embedded */
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff3e2f;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .contact-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 15px;
+            }
+            .map-placeholder {
+                height: 250px;
+            }
+        }
+        /* FAQ Section Styling */
+        .faq-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            margin-top: 40px;
+        }
+
+        .faq-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-section dl {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .faq-section dt {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .faq-section dd {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .faq-section dd a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .faq-section dd a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CTL Limited</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+				<a href="products.html">Productos</a>
+                <a href="about.html">Acerca de</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Contáctenos</h1>
+        <p>
+            ¿Tiene alguna pregunta o necesita asistencia con nuestros servicios? Contáctenos a través del formulario a continuación o utilice el mapa para visitar nuestra oficina.
+        </p>
+
+        <!-- Google Maps Embedded -->
+        <div class="map-placeholder">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18681.587665572715!2d-76.7076779!3d17.9496754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edb47ad36b8f401%3A0x791e9ed3acf00f4b!2sCTL%20Limited%20-%20Harbour%20View!5e1!3m2!1sen!2sjm!4v1729282931893!5m2!1sen!2sjm" width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form id="emailForm">
+                <input type="text" id="name" name="name" placeholder="Tu Nombre" required autocomplete="name">
+                <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" required autocomplete="email">
+                <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+                <button type="button" onclick="sendMail()">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <h2>Nuestra Oficina</h2>
+            <p>
+                Dirección: Shop #21, Harbour Bay Plaza, Harbour View<br>
+                Teléfono: 8765482003 / 8767833559<br>
+                Correo Electrónico: support@ctl-ltd.com
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Preguntas Frecuentes (FAQ)</h2>
+        <dl>
+			<dt>¿Cómo puedo pagar por mi servicio?</dt>
+			<dd>INFORMACIÓN BANCARIA ONLINE DE C.T.L LIMITED</dd>
+
+			<dd>Para los clientes que realicen la transferencia a través de NCB Online Banking, CTL Ltd ya está registrado en la plataforma de NCB. LLAME/VENGA A LA OFICINA, para obtener su número de cuenta asignado (este es también el número de cuenta que aparece en su recibo). Números de teléfono (876-5482003/876-783-3559).</dd>
+
+			<dd>PARA LOS CLIENTES QUE REALICEN TRANSFERENCIAS ONLINE A TRAVÉS DE OTRA INSTITUCIÓN BANCARIA, EJEMPLO (SCOTIA, JMMB, CIBC)</dd>
+
+			<dd>NOMBRE DEL BANCO: NATIONAL COMMERCIAL BANK (NCB)</dd>
+
+			<dd>NOMBRE: C.T.L LIMITED</dd>
+
+			<dd>N° DE CUENTA: 201-046-351 (chequing)</dd>
+
+			<dd>SUCURSAL: WINDWARD ROAD/DUKE STREET</dd>
+
+			<dd>POR FAVOR LLAME A C.T.L LIMITED CUANDO SE COMPLETE LA TRANSFERENCIA.</dd>
+
+            <dt>¿Qué servicios ofrece CTL Limited?</dt>
+            <dd>Ofrecemos servicios de internet de alta velocidad, instalación y soporte técnico. También proporcionamos servicios personalizados según las necesidades del cliente.</dd>
+
+            <dt>¿Cómo puedo contactar a soporte?</dt>
+            <dd>Puede contactarnos por correo electrónico a <a href="mailto:support@ctl-ltd.com">support@ctl-ltd.com</a> o llamarnos a los números proporcionados arriba.</dd>
+
+            <dt>¿Cómo puedo contratar un servicio?</dt>
+            <dd>Puede completar el formulario de contacto en esta página, y un representante de ventas se pondrá en contacto con usted para discutir opciones de servicio y precios.</dd>
+        </dl>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CTL Limited. Todos los derechos reservados.</p>
+        <p>
+            <a href="privacy-policy.html">Política de Privacidad</a> | 
+            <a href="terms.html">Términos y Condiciones</a>
+        </p>
+    </footer>
+
+    <script>
+        // Function to toggle menu for mobile
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Function to handle form submission
+        function sendMail() {
+            const form = document.getElementById('emailForm');
+            const name = form.name.value;
+            const email = form.email.value;
+            const message = form.message.value;
+            alert(`Mensaje enviado por ${name} (${email}): ${message}`);
+            form.reset();
+        }
+    </script>
+
+</body>

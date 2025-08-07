@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CTL Limited | Jamaica’s Trusted Internet & Cable Provider</title>
+  <meta name="description" content="CTL Limited provides reliable home internet and cable TV across Harbour View, Bull Bay, Albion, Yallahs, and beyond. Over 30 years of local service and support. Get connected today.">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="favicon.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+   /* Reset and Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('background.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation Styling */
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        .menu, .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-switcher {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            min-width: 90px;
+        }
+
+        .lang-switcher:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            position: relative;
+            background-image: url('hero.webp');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 10px;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+        }
+
+        .hero-content .btn-primary {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .hero-content .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Content Section Styling */
+        .content {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content-boxes {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .content-box {
+            flex: 1;
+            max-width: 280px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .content-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Testimonial Section Styling */
+        .testimonial {
+            padding: 40px;
+            background-color: #fafafa;
+            text-align: center;
+            font-style: italic;
+        }
+
+        blockquote {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        cite {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Extra Content Section */
+        .extra-content {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .extra-content h2 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            flex: 1;
+            max-width: 250px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            .hamburger {
+            display: none;
+                        }
+            }
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 20px;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .hero-content .btn-primary {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .content-boxes, .services-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+
+            footer div {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+  </style>
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CTL Limited",
+    "url": "https://ctl-ltd.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop #21, Harbour Bay Plaza",
+      "addressLocality": "Harbour View",
+      "addressRegion": "Saint Andrew",
+      "postalCode": "Kingston 17",
+      "addressCountry": "JM"
+    },
+    "sameAs": [
+      "https://www.instagram.com/ctl.ltd"
+    ]
+  }
+  </script>
+
+ </head>
+ <body>
+  <!-- Header and Navigation -->
+  <header>
+   <nav>
+    <div class="logo">
+     <a href="index.html">
+      CTL Limited
+     </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+     ☰
+    </div>
+    <div class="menu">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="products.html">
+      Products
+     </a>
+     <a href="about.html">
+      About Us
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
+     <button class="lang-switcher" onclick="switchLanguage()">
+      Español
+     </button>
+    </div>
+   </nav>
+   <div class="sub-nav">
+    <a href="areasweserve.html">
+     Service Area
+    </a>
+    <a href="careers.html">
+     Careers
+    </a>
+    <a href="https://balance.ctl-ltd.com/">Check Balance</a>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+   <div class="hero-content">
+    <h1>
+     Let CTL LIMITED Handle your Home Internet and Cable
+    </h1>
+    <p>
+      Affordable, dependable service built for your needs. Discover our packages and join the homes that trust CTL.
+    </p>
+    <a class="btn-primary" href="products.html">
+     Our Packages
+    </a>
+   </div>
+  </section>
+  <!-- Content Section -->
+  <section class="content">
+   <h2>
+    Why Choose CTL Limited?
+   </h2>
+   <div class="content-boxes">
+    <div class="content-box">
+     <img alt="High-Speed Internet" loading="lazy" src="wifisymbol.webp"/>
+     <h3>
+      High-Speed Internet
+     </h3>
+     <p>
+      Get lightning-fast internet with speeds up to 50 Mbps, perfect for gaming, streaming, and video calls.
+     </p>
+     <a class="btn-primary" href="products.html">
+      Sign Up
+     </a>
+    </div>
+    <div class="content-box">
+     <img alt="24/7 Support" loading="lazy" src="customerservice.webp"/>
+     <h3>
+      Personalized Local Support
+     </h3>
+     <p>
+      Get personalized support from a team that understands your needs. We offer local, responsive service tailored to you
+     </p>
+     <a class="btn-primary" href="about.html">
+      Our Team
+     </a>
+    </div>
+    <div class="content-box">
+     <img alt="Family Friendly" loading="lazy" src="customizable.webp"/>
+     <h3>
+      Packages for Every Need
+     </h3>
+     <p>
+      We offer customizable plans for students, families, and small businesses to meet all your needs.
+     </p>
+     <a class="btn-primary" href="https://ctl-balance-portal.onrender.com/sign_up_forms">
+      Pick Your Plan
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Testimonial Section -->
+  <section class="testimonial">
+   <h2>
+    See what Customers in Bull Bay are Saying about Our internet Service
+    </h2>
+     <blockquote>
+      "CTL Limited transformed my home office! I’ve never experienced such reliable, fast internet in my area. Their customer service team is always just a call away. Highly recommend!"
+     </blockquote>
+     <cite>
+      - Sarah M., Kingston
+     </cite>
+  </section>
+  <!-- Extra Content Section -->
+  <section class="extra-content">
+   <h2>
+    Our Services at a Glance
+   </h2>
+   <div class="services-grid">
+    <div class="service-item">
+     <h3>
+      Fiber to the Home (FTTH)
+     </h3>
+     <p>
+      Enjoy uninterrupted, blazing-fast internet speeds with our state-of-the-art fiber optic technology.
+     </p>
+    </div>
+    <div class="service-item">
+     <h3>
+      Reliable Cable TV
+     </h3>
+     <p>
+      Access hundreds of HD channels, including sports, news, and entertainment at affordable prices.
+     </p>
+    </div>
+    <div class="service-item">
+     <h3>
+      Customizable Packages
+     </h3>
+     <p>
+      Choose from a variety of internet and TV packages to suit your personal or business needs.
+     </p>
+    </div>
+   </div>
+   <div style="text-align: center;">
+    <a class="btn-primary" href="products.html">
+     Explore Our Packages
+    </a>
+   </div>
+  </section>
+  <!-- Channel Guide Section -->
+<section class="extra-content">
+  <h2>View Our Latest Channel Guide</h2>
+  <p>See what's playing on CTL Cable. Explore our full list of channels anytime.</p>
+  <a href="CTL CHANNEL LISTING.docx" class="btn-primary">View Channel Listing</a>
+</section>
+
+  <!-- Footer -->
+  <footer>
+   <div>
+    <a href="PrivacyPolicy.pdf" target="_blank">
+     Privacy Policy
+    </a>
+    |
+    <a href="TermsofUse.pdf" target="_blank">
+     Terms of Service
+    </a>
+   </div>
+   <div>
+    <a href="https://www.facebook.com" target="_blank">
+     Facebook
+    </a>
+    |
+    <a href="https://wa.me/18767833559" target="_blank">
+     WhatsApp
+    </a>
+    |
+    <a href="https://www.instagram.com" target="_blank">
+     Instagram
+    </a>
+    <a href="internet-providers-in-jamaica.html">Blog Post: Internet Providers in Jamaica – What to Know</a>
+
+   </div>
+   © 2024 CTL Limited. All rights reserved.
+  </footer>
+  <a href="https://wa.me/18767833559" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 16px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:1000;" target="_blank">
+<i class="fab fa-whatsapp" style="font-size:24px;"></i>
+  <script>
+   // Toggle menu for mobile
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Language switcher function
+        function switchLanguage() {
+            const currentUrl = window.location.href;
+
+            if (currentUrl.includes('index.html')) {
+                window.location.href = 'indexesp.html';
+            } else if (currentUrl.includes('products.html')) {
+                window.location.href = 'productesp.html';
+            } else if (currentUrl.includes('about.html')) {
+                window.location.href = 'aboutesp.html';
+            } else if (currentUrl.includes('contact.html')) {
+                window.location.href = 'contactesp.html';
+            } else if (currentUrl.includes('indexesp.html') || currentUrl.includes('productesp.html') || currentUrl.includes('aboutesp.html') || currentUrl.includes('contactesp.html')) {
+                window.location.href = currentUrl.replace('esp', '');
+            }
+        }
+  </script>
+
+</body>
+</html>

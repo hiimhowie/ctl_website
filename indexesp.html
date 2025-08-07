@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTL Limitado</title>
+    <meta name="description" content="CTL Limitado ofrece internet para el hogar rápido y confiable, además de paquetes de televisión por cable premium. Sirviendo a nuestra comunidad con atención personalizada y más de 30 años de experiencia.">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon.png" type="image/png">
+
+    <style>
+        /* Restablecimiento y estilo básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Estilo de encabezado y navegación */
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        .menu, .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-switcher {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            min-width: 90px;
+        }
+
+        .lang-switcher:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo de sección principal */
+        .hero {
+            position: relative;
+            background-image: url('hero.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 10px;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+        }
+
+        .hero-content .btn-primary {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .hero-content .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estilo de la sección de contenido */
+        .content {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content-boxes {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .content-box {
+            flex: 1;
+            max-width: 280px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .content-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Sección de testimonios */
+        .testimonial {
+            padding: 40px;
+            background-color: #fafafa;
+            text-align: center;
+            font-style: italic;
+        }
+
+        blockquote {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        cite {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Sección de contenido adicional */
+        .extra-content {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .extra-content h2 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            flex: 1;
+            max-width: 250px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 768px) {
+            .hamburger {
+            display: none;
+                        }
+            }
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 20px;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .hero-content .btn-primary {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .content-boxes, .services-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            footer div {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CTL Limitado</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="menu">
+                <a href="indexesp.html">Inicio</a>
+                <a href="productesp.html">Productos</a>
+                <a href="aboutesp.html">Nosotros</a>
+                <a href="contactesp.html">Contacto</a>
+                <button onclick="switchLanguage()" class="lang-switcher">English</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de héroe -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Permítanos resolver sus necesidades de Internet y Cable en el hogar</h1>
+            <p>Internet rápido y confiable y paquetes de cable premium, diseñados para usted. Vea la diferencia con nuestras velocidades inigualables y servicio de calidad.</p>
+            <a href="products.html" class="btn-primary">Nuestros Paquetes</a>
+        </div>
+    </section>
+    <!-- Sección de contenido -->
+    <section class="content">
+        <h2>¿Por qué elegir a CTL Limitado?</h2>
+        <div class="content-boxes">
+            <div class="content-box">
+                <img src="wifisymbol.png" alt="Internet de alta velocidad" />
+                <h3>Internet residencial de alta velocidad </h3>
+                <p>Obtenga internet ultra rápido con velocidades de hasta 50 Mbps, perfecto para juegos, transmisión y videollamadas.</p>
+                <a href="productesp.html" class="btn-primary">Registrarse</a>
+            </div>
+            <div class="content-box">
+                <img src="customerservice.png" alt="Soporte 24/7" />
+                <h3>Soporte Local Personalizado</h3>
+                <p>Reciba soporte personalizado de un equipo que comprende sus necesidades. Ofrecemos un servicio local, adaptado a usted.</p>
+                <a href="aboutesp.html" class="btn-primary">Nuestro Equipo</a>
+            </div>
+            <div class="content-box">
+                <img src="customizable.png" alt="Paquetes Personalizables" />
+                <h3>Paquetes para Cada Necesidad</h3>
+                <p>Ofrecemos planes personalizables para estudiantes, familias y pequeñas empresas para satisfacer todas sus necesidades.</p>
+                <a href="https://form.jotform.com/223254470815858" class="btn-primary">Elija Su Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de testimonios -->
+    <section class="testimonial">
+        <h2>Vea lo que los clientes de Bull Bay están diciendo sobre nuestro servicio de Internet.<h2>
+        <blockquote>
+            "¡CTL Limitado transformó mi oficina en casa! Nunca había experimentado un internet tan confiable y rápido en mi área. Su equipo de atención al cliente siempre está a una llamada de distancia. ¡Altamente recomendado!"
+        </blockquote>
+        <cite>- Sarah M., Kingston</cite>
+    </section>
+
+    <!-- Sección de contenido adicional -->
+    <section class="extra-content">
+        <h2>Nuestros Servicios de un Vistazo</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Fibra hasta el Hogar (FTTH)</h3>
+                <p>Disfrute de velocidades de internet sin interrupciones y súper rápidas con nuestra tecnología de fibra óptica de última generación.</p>
+            </div>
+            <div class="service-item">
+                <h3>TV por Cable Confiable</h3>
+                <p>Acceda a cientos de canales HD, incluyendo deportes, noticias y entretenimiento, a precios accesibles.</p>
+            </div>
+            <div class="service-item">
+                <h3>Paquetes Personalizables</h3>
+                <p>Elija entre una variedad de paquetes de internet y TV que se adapten a sus necesidades personales o empresariales.</p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="productesp.html" class="btn-primary">Explore Nuestros Paquetes</a>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>
+            <a href="PrivacyPolicy.pdf" target="_blank">Política de Privacidad</a> | <a href="TermsofUse.pdf" target="_blank">Términos de Servicio</a>
+        </div>
+        <div>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://wa.me/18767833559" target="_blank">WhatsApp</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+        &copy; 2024 CTL Limitado. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Toggle menu para móvil
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Función de cambio de idioma
+        function switchLanguage() {
+            const currentUrl = window.location.href;
+
+            if (currentUrl.includes('index.html')) {
+                window.location.href = 'indexesp.html';
+            } else if (currentUrl.includes('products.html')) {
+                window.location.href = 'productesp.html';
+            } else if (currentUrl.includes('about.html')) {
+                window.location.href = 'aboutesp.html';
+            } else if (currentUrl.includes('contact.html')) {
+                window.location.href = 'contactesp.html';
+            } else if (currentUrl.includes('indexesp.html') || currentUrl.includes('productesp.html') || currentUrl.includes('aboutesp.html') || currentUrl.includes('contactesp.html')) {
+                window.location.href = currentUrl.replace('esp', '');
+            }
+        }
+    </script>
+
+</body>
+</html>

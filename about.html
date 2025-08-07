@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTL Limited - About Us</title>
+    <meta name="description" content="CTL Limited also known as CTL LTD is dedicated to providing top-quality internet and cable services with over 30 years of trusted service in Jamaica.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic CSS reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile Navigation */
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 20px;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+
+            .menu a {
+                padding: 10px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+        /* Mobile Responsive Adjustments */
+        @media (min-width: 768px) {
+       .hamburger {
+        display: none;
+		}
+		}
+
+        /* Container for the text and images */
+        .container {
+            display: flex;
+            width: 100%;
+            padding: 60px 20px;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        /* Text section */
+        .text-column {
+            width: 70%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Image section */
+        .image-column {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Careers Section */
+        .careers {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .careers h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .careers p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .careers form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .careers input, .careers textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .careers button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .careers button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .text-column, .image-column {
+                width: 100%;
+            }
+
+            .about-section h1 {
+                font-size: 28px;
+            }
+
+            .about-section p {
+                font-size: 16px;
+            }
+
+            .team-section h2, .careers h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CTL Limited</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+		 <div class="sub-nav">
+        <a href="areasweserve.html">Service Area</a>
+        <a href="careers.html">Careers</a>
+        <a href="https://balance.ctl-ltd.com/">Check Balance</a>
+		</div>
+    </header>
+
+    <!-- Container for About Section and Team Section -->
+    <div class="container">
+        <!-- Text Section -->
+        <div class="text-column">
+            <section class="about-section">
+                <h1>About Us</h1>
+                <p>
+                    Welcome to CTL Limited, your premier provider of fiber internet and cable TV services. Established in 1994, our mission is to deliver high-quality connectivity solutions to homes and businesses in Jamaica.
+                </p>
+                <p>
+                    At CTL Limited, we understand the importance of reliable internet and entertainment options in today's fast-paced world. That's why we offer a range of plans tailored to meet the diverse needs of our customers, from casual users to heavy streamers and gamers.
+                </p>
+                <p>
+                    Our dedicated team is committed to ensuring that you receive exceptional service and support. We continuously strive to enhance our offerings and keep you connected with the latest technology.
+                </p>
+                <p>
+                    Join us on our journey to provide the best internet and cable TV experience in Jamaica!
+                </p>
+            </section>
+
+            <!-- Team Section -->
+            <section class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="Cedricwalker.jpg" alt="Director">
+                        <h3>Cedric Walker</h3>
+                        <p>CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="javaughn.png" alt="Customer Support">
+                        <h3>Javaughn Taylor</h3>
+                        <p>CTO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="Donna.jpg" alt="Manager">
+                        <h3>Donna Walker</h3>
+                        <p>Manager</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-column">
+            <img src="dale.jpg" alt="Image 1" class="hero-image">
+            <img src="technicians.jpg" alt="Image 2" class="hero-image">
+            <img src="fel.png" alt="Image 3" class="hero-image">
+        </div>
+    </div>
+
+    <!-- Careers Section -->
+    <section class="careers">
+        <h2>Join Our Team</h2>
+        <p>We are always looking for talented and motivated individuals to join our team. If you're interested in starting a career with us, send us your details and we’ll get back to you!</p>
+        <form id="jobForm">
+            <input type="text" id="applicant-name" name="name" placeholder="Your Name" required autocomplete="name">
+            <input type="email" id="applicant-email" name="email" placeholder="Your Email" required autocomplete="email">
+            <textarea id="applicant-message" name="message" rows="5" placeholder="Your Message or Cover Letter" required></textarea>
+            <button type="button" onclick="sendJobApplication()">Apply Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <a href="PrivacyPolicy.pdf" target="_blank">Privacy Policy</a> | <a href="termsofuse.pdf" target="_blank">Terms of Service</a>
+        </div>
+        <div>
+            <a href="https://www.facebook.com" target="m.facebook.com/ctllimited/">Facebook</a> |
+            <a href="https://wa.me/18767833559" target="_blank">Chat with us on WhatsApp</a> |
+            <a href="https://www.instagram.com" target="instagram/ctl-ltd">Instagram</a>
+        </div>
+        &copy; 2024 CTL Limited. All rights reserved.
+    </footer>
+<a href="https://wa.me/18767833559" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 16px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:1000;" target="_blank">
+<i class="fab fa-whatsapp" style="font-size:24px;"></i>
+</a>
+    <script>
+        // Toggle menu for mobile
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Change background color of nav bar on scroll
+        window.onscroll = function() {
+            var navbar = document.querySelector("nav");
+            if (window.pageYOffset > 50) {
+                navbar.style.backgroundColor = "#003366";
+            } else {
+                navbar.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+            }
+        };
+
+        function sendJobApplication() {
+            var name = document.getElementById('applicant-name').value;
+            var email = document.getElementById('applicant-email').value;
+            var message = document.getElementById('applicant-message').value;
+
+            var mailtoLink = 'mailto:support@ctl-ltd.com' +  
+                             '?subject=Job Application from ' + encodeURIComponent(name) +
+                             '&body=Name: ' + encodeURIComponent(name) +
+                             '%0D%0AEmail: ' + encodeURIComponent(email) +
+                             '%0D%0AMessage/Cover Letter: ' + encodeURIComponent(message);
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+</body>
+</html>
